@@ -1,0 +1,215 @@
+/* General */
+
+*, ::before, ::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    background: #f1f1f1;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    line-height: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid #000000;
+}
+
+.cadreInfos, .contenuCV
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* Cadre Informations */
+
+    /* Général*/
+
+    .cadreInfos
+    {
+        background: #000000;
+        color: #f1f1f1;
+    }
+
+    /* First name, Name */
+
+    h1
+    {
+        margin-bottom: auto;
+        text-transform: uppercase;
+        font-size: 4vmax;
+        text-align: center;
+    }
+
+    /* Social Networks */
+
+    .reseaux
+    {
+        text-align: center;
+    }
+
+    .reseaux img
+    {
+        width: 50%;
+        margin: 10px 0;
+        border-radius: 20px;
+    }
+
+    /* Address and Contacts */
+
+    address
+    {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        font-size: 2.5vmin;
+    }
+
+    #location, #phone, #mail
+    {
+        display: grid;
+        grid-template-columns: 4vw 1fr;
+        grid-gap : 10px;
+        align-items: center;
+        justify-content: center;
+        margin: 5px
+    }
+
+    address i
+    {
+        justify-self: center;
+    }
+
+    a
+    {
+        text-decoration: none;
+        color: #f1f1f1;
+    }
+
+    a:hover
+    {
+        text-decoration: underline;
+    }
+
+/* Cadre ContenuCV*/
+
+    /* Général */
+    h2
+    {
+        font-size: 3.5vmin;
+        text-align: center;
+    }
+
+    ul
+    {
+        font-size: 2vmin;
+        padding-left: 20px;
+    }
+
+    hr
+    {
+        margin: 15px 0;
+    }
+
+    h3
+    {
+        font-size: 2.1vmin;
+        margin-top: 10px;
+    }
+
+/* Media querries */  
+
+@media screen and (max-width:1005px)
+{
+    /* Général */
+    body 
+    {
+        flex-direction: column;
+    }
+
+    .cadreInfos, .contenuCV
+    {
+        width: 100%;
+    }
+
+    /* Social Networks */
+    .reseaux
+    {
+        display: flex;
+        justify-content: center;
+        padding-top:10px;
+        order: 3;
+    }
+
+    .reseaux img 
+    {
+        width: 60%;
+    }
+
+    /* Address and Contacts */
+    address
+    {
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width:500px)
+{  
+    /* Address and Contacts */
+
+    address
+    {
+        display: inline;
+        text-align: center;
+        font-size: 4vmin;
+    }
+
+    #location
+    {
+        display: block;
+    }
+    
+    #phone, #mail
+    {
+        display: inline;
+    }
+
+    address .fas
+    {
+        display: none;
+    }
+
+    h2
+    {
+        font-size: 5vmin;
+    }
+
+    h3
+    {
+        font-size: 3vmin;
+    }
+
+    ul
+    {
+        font-size: 3vmin;
+    }
+
+    .reseaux
+    {
+        flex-wrap: wrap;
+    }
+    .reseaux img 
+    {
+        width: 60%;
+    }
+
+
+}
